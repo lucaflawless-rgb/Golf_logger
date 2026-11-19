@@ -80,9 +80,23 @@ def main():
             print("\n[Option 2 selected - insert new data]")
             print("\n -----INSERT NEW DATA-----")
             conn = sqlite3.connect(DB_NAME)
-            cursor = conn.connect
-
-            row_id = input("")
+            cursor = conn.cursor()
+            
+            RowId = input("Row ID: ")
+            Name = input("Name: ")
+            Score = int(input("Score: "))
+            Par = int(input("Par: "))
+            Over_Par = int(Score) - int(Par)
+            Wind_Speed = input("Wind Speed (11km/h)")
+            Date = input("Date (dd/mm/yyyy)")
+            
+            cursor.execute('insert into scores ("Row ID", Name, score, par, "Over par", "Wind Speed", Date) values(?,?,?,?,?,?,?)', 
+            (RowId,Name,Score,Par,Over_Par,Wind_Speed,Date))
+            
+            conn.commit() 
+            conn.close()
+            
+            print("New row inserted into database")
         elif(select == 3):
             print("\n[Option 3 selected - Work in progress")
 
