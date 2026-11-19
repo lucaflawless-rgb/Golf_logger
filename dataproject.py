@@ -10,7 +10,6 @@ def initialize_database():
     conn = sqlite3.connect(DB_NAME)
     if os.path.exists(CSV_PATH):
         df = pd.read_csv(CSV_PATH)
-        # Clean column names just in case
         df.columns = df.columns.str.strip()
         df.to_sql('scores', conn, if_exists='replace', index=False)
     conn.close()
@@ -34,8 +33,8 @@ def main():
         except ValueError:
             print("Please enter a valid number")
             continue
-    
-        # ALL menu choices must be INDENTED inside the while loop!
+  
+  
         if (select == 1):
             conn = sqlite3.connect(DB_NAME)
             df = pd.read_sql("SELECT * FROM scores", conn)
@@ -81,8 +80,9 @@ def main():
             print("\n[Option 2 selected - insert new data]")
             print("\n -----INSERT NEW DATA-----")
             conn = sqlite3.connect(DB_NAME)
-            
+            cursor = conn.connect
 
+            row_id = input("")
         elif(select == 3):
             print("\n[Option 3 selected - Work in progress")
 
