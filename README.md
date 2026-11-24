@@ -15,7 +15,7 @@
 
 ## Description of the project
 
-A Python command line interface for managing, inspecting, inserting and visualizing golf round data using SQLite('golf_data.db'), CSV source data('Data_centric_programming.csv') and 'matpoltlib'.
+A Python command line interface for managing, inspecting, inserting and visualizing golf round data using SQLite(`golf_data.db`), CSV source data(`Data_centric_programming.csv`) and `matpoltlib`.
 
 ## Instructions for use
 
@@ -50,20 +50,23 @@ Place the following files in the same project direactory
 
 ## List of files in the project
 
-### Files & Source
-| Files | Source |
+### Files & description
+| File | Description |
 | :--- | :--- |
-| `main.py` | Self written |
-| `test.py` | Self written |
-| `test.py`
+| `main.py` | Main Python CLI script for inspecting, inserting, and graphing golf data. |
+| `Data_centric_programming.csv` | Source CSV file containing the initial golf records. |
+| `golf_data.db` | SQLite database file storing the `scores` table. |
+| `README.md` | Project documentation for the assignment. |
+
 
 
 ## References
-- Item 1
-- Item 2
+- [Item 1](https://www.youtube.com/watch?v=vvKMxsee5uo)
+- [Item 2](https://www.youtube.com/watch?v=-Wvt7lWxzf4)
+- [Item 3](https://www.youtube.com/watch?v=D4VlmL3G4_o)
 
 ## What I am most proud of in the assignment
-Bla bla bla
+Im most proud of being able to put together a complete, working data aplication in Python that connects a CSV ingestion, A SQLite3 database `golf_data.db`, `pandas` filtering, and `matplotlib` visualizations inside a clean command-line menu. Also Graphing made the proect feel more practical and cohesive.
 
 ## What I learned
-Bla bla bla
+Completing this project helped me build practical skills working with `SQLite3`,`Pandas` and `matplotlib` within a commad line interface in python.I learned how to load CSV data into a SQLite database, query and filter records with `pandas`.I also gained a better understanding of handling user input errors, debugging menu flow and plotting behavior.
