@@ -77,7 +77,6 @@ def main():
             
                 
         elif(select == 2):
-            print("\n[Option 2 selected - insert new data]")
             print("\n -----INSERT NEW DATA-----")
             conn = sqlite3.connect(DB_NAME)
             cursor = conn.cursor()
@@ -102,8 +101,47 @@ def main():
             print(f"Added {RowId} for {Name} ({Over_Par} to par).")
             
         elif(select == 3):
-            print("\n[Option 3 selected - Work in progress")
+            print("\n-----Plot with Matplotlib-----")
+            conn = sqlite3.connect(DB_NAME)
+            df = pd.read_sql("SELECT * FROM scores", conn)
+            conn.close()
+            
+            print("----Graphing options----")
+            print("1.Over par across entries")
+            print("2.Average score by player ")
+            
+            
+            try:
+                graph_choice = int(input("Choose a graph (1 or 2): "))
+            except ValueError:
+                print("Please enter a valid option") 
+                continue
+        
+            if graph_choice == 1:
+                plt.figure(figsize=(10, 5))
+                plt.plot(df["Row ID"], df["Over par"], marker="o", linestyle="-")
+                plt.axhline(0, linestyle="--", linewidth=1)
+                plt.title("Golf Performance Relative to Par")
+                plt.xlabel("Row ID")
+                plt.ylabel("Over Par")
+                plt.xticks(rotation=45)
+                plt.tight_layout()
+                plt.show()
+            
+            elif graph_choice == 2:
+                    avg_scores = df.groupby("Name", as_index=False)["score"].mean()
+                    plt.figure(figsize=(8, 5))
+                    plt.bar(avg_scores["Name"], avg_scores["score"])
+                    plt.title("Average Score by Player")
+                    plt.xlabel("Player Name")
+                    plt.ylabel("Average Score")
+                    plt.xticks(rotation=30)
+                    plt.tight_layout()
+                    plt.show()
 
+            else:
+                print("[!] Invalid graph option. Returning to main menu.")
+        
         elif(select == 4):
             print("\nGoodbye!")
 
