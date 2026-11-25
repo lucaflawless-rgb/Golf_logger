@@ -120,7 +120,6 @@ def main():
             if graph_choice == 1:
                 plt.figure(figsize=(10, 5))
                 plt.plot(df["Row ID"], df["Over par"], marker="o", linestyle="-")
-                plt.axhline(0, linestyle="--", linewidth=1)
                 plt.title("Golf Performance Relative to Par")
                 plt.xlabel("Row ID")
                 plt.ylabel("Over Par")
