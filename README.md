@@ -2,6 +2,8 @@
 
 - Golf Round Logger & Visualizer
 
+![An image](picture.jpeg)
+
 
 ## Data Dictionary
 * Column Name - Data Type - Description.
@@ -52,7 +54,6 @@ Place the following files in the same project direactory
 
 ### Files & description
 | File | Description |
-| :--- | :--- |
 | `main.py` | Main Python CLI script for inspecting, inserting, and graphing golf data. |
 | `Data_centric_programming.csv` | Source CSV file containing the initial golf records. |
 | `golf_data.db` | SQLite database file storing the `scores` table. |
@@ -61,9 +62,12 @@ Place the following files in the same project direactory
 
 
 ## References
-- [Item 1](https://www.youtube.com/watch?v=vvKMxsee5uo)
+- [Item 1](https://www.youtube.com/watch?v=vvKMxsee5uo) 
+* Error checking tutorial 
 - [Item 2](https://www.youtube.com/watch?v=-Wvt7lWxzf4)
+* Installing and setting up matplotlib
 - [Item 3](https://www.youtube.com/watch?v=D4VlmL3G4_o)
+* Basic matplotlib function and uses
 
 ## What I am most proud of in the assignment
 Im most proud of being able to put together a complete, working data aplication in Python that connects a CSV ingestion, A SQLite3 database `golf_data.db`, `pandas` filtering, and `matplotlib` visualizations inside a clean command-line menu. Also Graphing made the proect feel more practical and cohesive.
