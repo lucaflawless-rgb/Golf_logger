@@ -70,3 +70,6 @@ Im most proud of being able to put together a complete, working data aplication 
 
 ## What I learned
 Completing this project helped me build practical skills working with `SQLite3`,`Pandas` and `matplotlib` within a commad line interface in python.I learned how to load CSV data into a SQLite database, query and filter records with `pandas`.I also gained a better understanding of handling user input errors, debugging menu flow and plotting behavior.
+
+## Reflection 
+Since completing this assignment I gave it few days to think about how i could have improved the overall design. One key issue I encountered was that I didn't have a way to edit or remove data from my  `SQLite` database, Which could lead to issues if the user wanted to change the date they inputted through the application.
