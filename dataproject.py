@@ -140,10 +140,10 @@ def main():
                     plt.show()
 
             else:
-                print("[!] Invalid graph option. Returning to main menu.")
+                print("Invalid graph option. Returning to main menu.")
         
         elif(select == 4):
-            print("\nGoodbye!")
+            print("\nGoodbye")
 
         else:
             print("You have selected an invalid option")
